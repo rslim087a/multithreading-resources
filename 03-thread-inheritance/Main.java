@@ -2,21 +2,21 @@ public class Main {
 
     public static void main(String[] args) {
         // Creating the first athlete thread
-        Thread athlete1 = new Thread(() -> {
+        Thread firstAthlete = new Thread(() -> {
             int bibNumber = 84921;
             runRace(bibNumber);
         });
 
 
         // Creating the second athlete thread
-        Thread athlete2 = new Thread(() -> {
+        Thread secondAthlete = new Thread(() -> {
             int bibNumber = 43114;
             runRace(bibNumber);
         });
 
         // Starting the threads
-        athlete1.start();
-        athlete2.start();
+        firstAthlete.start();
+        secondAthlete.start();
     }
 
     private static void runRace(int bibNumber) {
