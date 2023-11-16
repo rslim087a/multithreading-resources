@@ -10,7 +10,7 @@ public class Main {
         }
 
         // Competition time limit
-        Thread.sleep(5000);
+        Thread.sleep(2000);
 
         // TODO: Task One - Interrupt all players after the time limit
 
