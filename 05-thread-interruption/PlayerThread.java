@@ -30,7 +30,7 @@ public class PlayerThread extends Thread {
     public void run() {
         while (!this.isInterrupted()) {
             // Increment score by up to 10 points
-            this.setScore(this.getScore() + random.nextInt(10)); 
+            this.setScore(this.getScore() + random.nextInt(5)); 
         }
         System.out.println("Player " + this.getName() + " final score: " + this.getScore());
     }
