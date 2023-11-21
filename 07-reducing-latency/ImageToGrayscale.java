@@ -21,6 +21,13 @@ public class ImageToGrayscale {
     }
 
 
+    // private static void convertToGrayscaleConcurrently(BufferedImage image, int numberOfThreads) throws InterruptedException {
+
+
+        
+    // }
+
+
     private static void convertToGrayscale(BufferedImage image) {
         for (int y = 0; y < image.getHeight(); y++) {
             for (int x = 0; x < image.getWidth(); x++) {
