@@ -3,8 +3,6 @@ import com.sun.net.httpserver.HttpExchange;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class FactorialHttpServer {
 
@@ -24,12 +22,6 @@ public class FactorialHttpServer {
                 e.printStackTrace();
             }
         });
-
-        // Create a thread pool with a number of threads equal to the number of available processors
-        ExecutorService threadPool = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-
-        // Set the server's executor to this thread pool
-        server.setExecutor(threadPool);
 
         // Start the server
         server.start();
