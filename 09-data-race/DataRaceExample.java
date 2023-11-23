@@ -28,7 +28,5 @@ public class DataRaceExample {
         Thread.sleep(100); // Simulating some delay
         writerThread.start();
 
-        writerThread.join();
-        // Reader thread might never terminate if the flag update is not visible
     }
 }
