@@ -1,20 +1,19 @@
 public class RaceConditionExample {
-    private int count = 0;
+    public static int count = 0;
 
-    public void increment() {
+    public static void increment() {
         count++; // Non-atomic increment can cause race condition
     }
 
-    public int getCount() {
+    public static int getCount() {
         return count;
     }
 
     public static void main(String[] args) throws InterruptedException {
-        RaceConditionExample example = new RaceConditionExample();
 
         Runnable incrementTask = () -> {
             for (int i = 0; i < 1000; i++) {
-                example.increment();
+                increment();
             }
         };
 
@@ -27,6 +26,6 @@ public class RaceConditionExample {
         t1.join();
         t2.join();
 
-        System.out.println("Final count (might be incorrect): " + example.getCount());
+        System.out.println("Final count (might be incorrect): " + getCount());
     }
 }
